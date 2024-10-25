@@ -1,4 +1,4 @@
-# test-flask-app
+# Otel Sample with App Insights
 
 ## set the env var for app insights
 ```bash
