@@ -21,3 +21,14 @@ services:
       APPLICATIONINSIGHTS_CONNECTION_STRING: "CONNECTION_STRING"
     depends_on:
       - backend
+
+# run mvn clean package in the spring-boot directory
+  spring-boot:
+    build:
+      context: ./spring-boot
+      dockerfile: Dockerfile
+    image: spring-boot:latest
+    ports:
+      - "8080:8080"
+    environment:
+      APPLICATIONINSIGHTS_CONNECTION_STRING: "CONNECTION_STRING"
